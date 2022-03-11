@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!--  Filter过滤注册-->
+  <filter>
+    <filter-name>CharsetEncoding</filter-name>
+    <filter-class>com.tan.servlet.Filterdemo</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharsetEncoding</filter-name>
+    <url-pattern>/hello</url-pattern>
+  </filter-mapping>
+
+
+  <!--Listener注册-->
+  <listener>
+    <listener-class>com.tan.servlet.ListenerDemo</listener-class>
+  </listener>
+
+  <!--  servlet 注册-->
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>com.tan.servlet.HelloServlet</servlet-class>
+  </servlet>
+<!--  Servlet请求路径-->
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/testListener</url-pattern>
+  </servlet-mapping>
+
+
+
+</web-app>
